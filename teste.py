@@ -1,4 +1,3 @@
-from main import showMaregrafo
 
 
 def testando():    
@@ -19,17 +18,6 @@ def testando():
         feature['id'] = feature['properties']['name']
         state_id_map[feature['properties']['sigla']] = feature['id']
     
-    # estados = [
-    #     'Acre', 'Alagoas', 'Amapá', 'Amazonas', 
-    #     'Bahia', 'Ceará', 'Distrito Federal', 
-    #     'Espírito Santo', 'Goiás','Maranhão', 
-    #     'Mato Grosso','Mato Grosso do Sul',
-    #     'Minas Gerais','Pará','Paraíba',
-    #     'Paraná','Pernambuco','Piauí',
-    #     'Rio de Janeiro','Rio Grande do Norte',
-    #     'Rio Grande do Sul','Rondônia','Roraima',
-    #     'Santa Catarina','São Paulo','Sergipe','Tocantins'
-    # ]
     estado = ['Rio de Janeiro']
     unit = [0]
     df = pd.DataFrame()
@@ -45,15 +33,11 @@ def testando():
         hover_data={'estado':False, 'unit':False},
     )
     
-    
-    
-    
+
     fig.update_geos(fitbounds = "locations", visible = False)
-    # fig.update_layout(hoverlabel)
 
     d = {'lon': [-41.882242, -46.382242], 'lat': [-22.972739, -23.072739]}
     df = pd.DataFrame(data=d)
-
 
     for index, row in df.iterrows():
         fig.add_trace(
@@ -75,25 +59,8 @@ def testando():
                 "Temperatura: 21ºC <br>" +
                 "Altura: 0.5m" +
                 "<extra></extra>",
-                # text=['Marégrafo 1\nÚltima medição:11:50', 'Marégrafo 2'],
             )
         )
-    
-    # plotAnnotes = []
-    # print(df)
-    # for index, row in df.iterrows():
-    #     print(row['lat'], row['lon'])
-    #     plotAnnotes.append(dict(x=row['lon'],
-    #                         y=row['lat'],
-    #                         # text="""<a href="https://plot.ly/">{}</a>""".format("EU AQUI"),
-    #                         text='aaaaaaaa',
-    #                         showarrow=False,
-    #                         xanchor='center',
-    #                         # yanchor='center',
-    #                         ))
-        # print(x)
-    # fig.show(config= dict(
-    #             displayModeBar = False))
     
     fig.update_layout(
         coloraxis_showscale=False,
@@ -107,4 +74,5 @@ def testando():
             displayModeBar = False))
 
     return mapa 
-    
+
+
