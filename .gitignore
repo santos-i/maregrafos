@@ -158,7 +158,7 @@ cython_debug/
 
 teste.py
 maregrafos.db
-db/maregrafos.db
+.db/maregrafos.db
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
